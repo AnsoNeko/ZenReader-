@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZenReader 本地阅读</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                900: '#0c4a6e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Mammoth.js for DOCX support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <!-- JSZip for EPUB support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- Epub.js for EPUB support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js"></script>
+    <!-- jschardet for encoding detection -->
+    <script src="https://cdn.jsdelivr.net/npm/jschardet@3.0.0/dist/jschardet.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div id="root"></div>
+  </body>
+</html>
